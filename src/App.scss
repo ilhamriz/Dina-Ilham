@@ -1,0 +1,156 @@
+@import 'variables.scss';
+@import './scss/margin.scss';
+
+@font-face {
+  font-family: "Claudia Laura";
+  src: local("Claudia_Laura"), url(./assets/fonts/Claudia_Laura.otf) format("otf");
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: $font-family-body;
+  background-color: $color-background;
+  color: $color-body;
+}
+
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hidden{
+  display: none;
+}
+
+.header-1{
+  @include text-header;
+  font-size: $font-size-xl4;
+  letter-spacing: 0.001em;
+}
+.header-2{
+  @include text-header;
+  font-size: $font-size-xl2;
+  line-height: 52px;
+  // text-transform: capitalize;
+}
+.header-3{
+  @include text-header;
+  font-size: $font-size-xl;
+  text-transform: capitalize;
+  line-height: 40px;
+}
+.header-4{
+  @include text-body;
+  font-size: $font-size-lg;
+  line-height: 34px;
+}
+// subtitle
+.text-body{
+  @include text-body;
+  font-size: $font-size-sm;
+  line-height: 27px;
+}
+.text-body-2-bold{
+  @include text-body;
+  font-size: $font-size-md;
+  font-weight: 600;
+  line-height: 30px;
+}
+.text-body-3{
+  @include text-body;
+  font-size: $font-size-xs;
+  // line-height: 20px;
+}
+.text-link{
+  font-size: $font-size-sm;
+  color: $color-body;
+  transition: .1s ease-in-out;
+
+  &:hover{
+    color: $color-placeholder;
+  }
+}
+// text-caption
+
+p{
+  @include text-body;
+  font-size: $font-size-sm;
+  line-height: 27px;
+}
+
+button{
+  border: none;
+  cursor: pointer;
+}
+
+.test-slider{
+  width: 50%;
+  background-color: black;
+}
+
+.loading{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: $color-background;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.load-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.text-label{
+  @include text-body;
+  font-size: $font-size-xs;
+  // font-weight: 600;
+  padding-bottom: 8px;
+}
+
+.section__title {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  padding-top: 4px;
+
+  @media (max-width: $dimension-tablet) {
+    flex-direction: row;
+    column-gap: 4px;
+    padding: 0;
+  }
+}
+
+.icon__container{
+  display: flex;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid $color-body;
+
+  & svg {
+    fill: $color-body;
+  }
+}
+
+.icon__container--light{
+  border: 2px solid $color-body-light;
+
+  & svg {
+    fill: $color-body-light;
+  }
+}

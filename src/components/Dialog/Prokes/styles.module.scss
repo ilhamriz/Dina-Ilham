@@ -1,0 +1,41 @@
+@import 'variables.scss';
+
+.prokes{
+  text-align: center;
+}
+
+.prokes__title{
+  text-align: center;
+  margin-bottom: $gap-mobile;
+}
+
+.prokes__content{
+  display: flex;
+  flex-direction: column;
+}
+
+.prokes__list{
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $gap-tablet;
+
+  @media (max-width: $dimension-tablet){
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+.prokes__item{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: flex-start;
+  align-items: center;
+
+  & img{
+    width: 100%;
+    max-width: fit-content;
+  }
+}

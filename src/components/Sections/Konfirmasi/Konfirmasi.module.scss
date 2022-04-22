@@ -1,0 +1,55 @@
+@import 'variables.scss';
+
+.konfirmasi__wrapper {
+  position: relative;
+
+  background-image: url('../../../assets/main/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.konfirmasi__container {
+  display: flex;
+  padding: 100px 0;
+
+  @media (max-width: $dimension-tablet) {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+}
+
+.konfirmasi__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: $gap-tablet;
+}
+
+.konfirmasi__form{
+  color: $color-body-light;
+  font-size: $font-size-xs;
+  max-width: 412px;
+}
+
+.konfirmasi__bunga{
+  position: absolute;
+  right: 0;
+  bottom: 100px;
+
+  & picture{
+    display: flex;
+  }
+
+  & img {
+    max-width: 125px;
+  }
+
+  @media (max-width: 570px) {
+    top: 10vw;
+    right: 0;
+
+    & img {
+      max-width: 80px;
+    }
+  }
+}

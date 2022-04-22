@@ -1,0 +1,34 @@
+@import 'variables.scss';
+
+.amplop__wrapper {
+  position: relative;
+}
+
+.amplop__inner {
+  display: flex;
+  padding: 100px 0;
+
+  @media (max-width: $dimension-tablet) {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+}
+
+.amplop__bunga{
+  position: absolute;
+  bottom: 100px;
+
+  & picture{
+    display: flex;
+  }
+
+  @media (max-width: $dimension-tablet) {
+    top: 25px;
+    bottom: auto;
+    left: 140px;
+
+    & img {
+      max-width: 100px;
+    }
+  }
+}

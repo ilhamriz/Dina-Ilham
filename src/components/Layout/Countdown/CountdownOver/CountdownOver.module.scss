@@ -1,0 +1,12 @@
+@import "variables.scss";
+
+.countdown {
+  text-align: center;
+
+  @media (max-width: $dimension-tablet) {
+    font-size: 40px;
+  }
+  @media (max-width: 450px) {
+    font-size: 7.5vw;
+  }
+}

@@ -1,0 +1,196 @@
+@import 'variables.scss';
+
+.pembuka__wrapper{
+  background-color: $color-background;
+  background-image: url('../../../assets/bunga/background.png');
+  background-position: center;
+
+  height: 100vh;
+  position: relative;
+  padding: 10vh 0;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.06);
+  overflow: auto;
+}
+
+.pembuka__container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+  row-gap: $gap-tablet;
+  position: relative;
+  z-index: 1;
+}
+
+.pembuka__title{
+  align-self: flex-end;
+}
+.pembuka__title__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pembuka__title__name{
+  @media (max-width: $dimension-tablet){
+    font-size: 5.25vw;
+    line-height: normal;
+  }
+  @media (max-width: $dimension-mobile-l){
+    font-size: $font-size-lg;
+  }
+}
+.pembuka__title__date{
+  font-weight: 600;
+  font-size: $font-size-md;
+}
+
+.pembuka__invited__content{
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.pembuka__invited__name{
+  display: flex;
+  align-items: center;
+  font-family: $font-family-header;
+  font-size: 96px;
+  font-weight: 500;
+  color: $color-title;
+  letter-spacing: -0.04em;
+
+  @media (max-width: $dimension-tablet){
+    font-size: 12.5vw;
+  }
+}
+
+.pembuka__cta{
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: $gap-mobile;
+  cursor: pointer;
+  
+  & svg{
+    width: 40px;
+    height: 40px;
+    fill: $color-background;
+    transition: $transition;
+  }
+
+  &:hover{
+    .pembuka__cta__arrow{
+      background-color: $color-background;
+    }
+
+    & svg{
+      fill: $color-title;
+    }
+  }
+
+  @media (max-width: $dimension-tablet){
+    & svg{
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  @media (max-width: $dimension-mobile-l){
+    flex-direction: column;
+    gap: 8px;
+    margin: 0 auto;
+
+    & svg{
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+.pembuka__cta__arrow{
+  display: flex;
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid $color-title;
+  background-color: $color-title;
+  transform: rotate(180deg);
+  transition: $transition;
+}
+
+.pembuka__bunga__kanan{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+
+  @media (max-width: $dimension-tablet){
+    & img {
+      width: 55vw;
+    }
+  }
+  @media (max-width: $dimension-mobile-l){
+    & img {
+      width: 240px;
+    }
+  }
+}
+
+.pembuka__bunga__kiri{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+
+  @media (max-width: $dimension-laptop){
+    & img {
+      width: 225px;
+    }
+  }
+}
+
+
+
+
+
+// NON RSVP
+.pembuka__container__nonrsvp{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  row-gap: 80px;
+  position: relative;
+  z-index: 1;
+
+  & .pembuka__title{
+    align-self: auto;
+  }
+
+  & .pembuka__title__content{
+    & .title__body{
+      @media (min-width: $dimension-mobile-l){
+        font-size: 20px;
+      }
+    }
+  }
+
+  & .pembuka__title__name{
+    font-size: $font-size-xl5;
+    line-height: normal;
+
+    @media (max-width: 500px){
+      font-size: 12.8vw;
+    }
+  }
+
+  & .pembuka__title__date{
+    @media (min-width: $dimension-mobile-l){
+      font-size: 24px;
+    }
+    font-weight: 500;
+  }
+
+  & .pembuka__cta{
+    flex-direction: column;
+  }
+}

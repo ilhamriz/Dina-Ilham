@@ -1,0 +1,186 @@
+@import 'variables.scss';
+
+.mempelai__wrapper{
+  background-image: url('../../../assets/main/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $color-body-light;
+}
+
+.mempelai__inner{
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.mempelai__container{
+  display: flex;
+
+  & > div{
+    flex: 50%;
+  }
+
+  @media (max-width: $dimension-tablet){
+    flex-direction: column;
+    gap: 48px;
+  }
+}
+
+.mempelai__images{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: $gap-tablet;
+  position: relative;
+
+  @media (max-width: $dimension-tablet){
+    align-items: flex-start;
+  }
+}
+
+.mempelai__img{
+  width: 100%;
+  
+  & picture {
+    display: flex;
+  }
+
+  & img{
+    width: 100%;
+  }
+}
+
+.mempelai__wanita__content{
+  padding: 12% 12% 0 0;
+  @media (max-width: $dimension-laptop){
+    padding-top: 10%;
+  }
+  @media (max-width: $dimension-tablet){
+    padding: 0 80px 0 0;
+    order: 2;
+  }
+  @media (max-width: $dimension-mobile-l){
+    padding: 0;
+  }
+}
+
+.mempelai__title{
+  display: flex;
+  align-items: center;
+  gap: $gap-mobile;
+  margin-bottom: 48px;
+
+  @media (max-width: $dimension-tablet){
+    margin-bottom: $gap-laptop;
+    gap: 8px;
+  }
+}
+
+.mempelai__wanita__name, .mempelai__pria__name{
+  margin-bottom: $gap-laptop;
+  font-size: $font-size-xl3;
+  color: $color-title-light;
+
+  @media (max-width: 1010px){
+    font-size: 4.7vw;
+  }
+  
+  @media (max-width: $dimension-tablet){
+    font-size: $font-size-xl2;
+    margin-bottom: $gap-tablet;
+  }
+  
+  @media (max-width: $dimension-mobile-m){
+    font-size: 10.67vw;
+  }
+}
+
+.mempelai__body{
+  display: flex;
+  flex-direction: column;
+  gap: $gap-mobile;
+
+  & p {
+    color: $color-body-light;
+  }
+}
+
+.mempelai__svg{
+  display: flex;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid $color-body-light;
+
+  & svg {
+    fill: $color-body-light;
+  }
+}
+
+.mempelai__wanita__bunga{
+  position: absolute;
+  bottom: 0;
+  right: 100%;
+
+  & picture{
+    display: flex;
+  }
+
+  & img {
+    max-width: 70px;
+  }
+
+  @media (max-width: $dimension-tablet){
+    top: -50px;
+    right: 0;
+  }
+
+  @media (max-width: $dimension-mobile-l){
+    top: -23px;
+
+    & img {
+      max-width: 50px;
+    }
+  }
+}
+
+.mempelai__pria__content{
+  padding: 8% 0 0 10%;
+
+  @media (max-width: $dimension-laptop){
+    padding-top: 6%;
+  }
+  @media (max-width: $dimension-tablet){
+    padding: 0 80px 0 0;
+  }
+  @media (max-width: $dimension-mobile-l){
+    padding: 0;
+  }
+}
+
+
+.mempelai__pria__bunga{
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+
+  & picture{
+    display: flex;
+  }
+
+  & img {
+    max-width: 60px;
+  }
+
+  @media (max-width: $dimension-tablet){
+    bottom: 98%;
+    left: auto;
+    right: 0;
+    transform: scaleX(-1);
+
+    & img {
+      max-width: 50px;
+    }
+  }
+}

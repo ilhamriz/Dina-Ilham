@@ -1,0 +1,16 @@
+@import "variables.scss";
+
+.countdown{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.countdown__title{
+  @media (max-width: $dimension-tablet) {
+    font-size: 40px;
+  }
+  @media (max-width: $dimension-mobile-l) {
+    font-size: 7.5vw;
+  }
+}

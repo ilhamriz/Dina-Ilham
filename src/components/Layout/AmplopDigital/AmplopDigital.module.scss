@@ -1,0 +1,127 @@
+@import "variables.scss";
+
+.amplop {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $gap-tablet;
+
+  @media (max-width: $dimension-mobile-l){
+    gap: $gap-mobile;
+  }
+}
+
+div.amplop__inputNumber{
+  background: white;
+  border-radius: 8px;
+  font-family: $font-family-body;
+  color: $color-body;
+  
+  & input {
+    padding: 12px 16px;
+  }
+
+  & fieldset {
+    border: 1px solid $color-body;
+  }
+
+  &:hover {
+    background: $color-background-gray;
+  }
+}
+
+.card__wrapper {
+  grid-row: 1 / span 5;
+  grid-column: 2 / span 1;
+}
+@media (max-width: 600px) {
+  .amplop {
+    grid-template-columns: 1fr;
+  }
+
+  .card__wrapper {
+    grid-row: auto;
+    grid-column: auto;
+  }
+}
+
+.card {
+  width: 100%;
+  max-width: 392px;
+  padding: 24px 0 24px 24px;
+  border-radius: $border-radius-md;
+  border: 2px solid $color-body;
+  background-color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.card__content{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.card__logo {
+  width: 64px;
+}
+
+.card__object {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  width: 80px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFFFFF;
+  }
+}
+
+.card__number__container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFFFF;
+
+  & svg {
+    cursor: pointer;
+    margin-right: 8px;
+    fill: $color-body;
+  }
+}
+
+.card__number, .card__name {
+  width: fit-content;
+  background: #FFFFFF;
+}
+
+.card__number {
+  font-weight: 700;
+}
+
+.card__qrcode{
+  display: flex;
+  background-color: #FFFFFF;
+  border-radius: $border-radius-md;
+  padding: 16px;
+  margin-top: 16px;
+
+  & img {
+    max-width: 150px;
+  }
+}
+
+._copy{
+  position: absolute;
+  top: 40px;
+  right: 84px;
+}

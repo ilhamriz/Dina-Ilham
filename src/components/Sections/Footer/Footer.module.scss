@@ -1,0 +1,83 @@
+@import 'variables.scss';
+
+.footer__inner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 100px;
+
+  @media (min-width: 901px) {
+    padding: 100px 0;
+  }
+  @media (max-width: 900px) {
+    padding: 100px 0 200px;
+  }
+}
+
+.footer__thanks{
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 435px) {
+    flex-direction: column;
+  }
+}
+
+.footer__thanks__title{
+  font-family: $font-family-body;
+  font-size: 96px;
+  color: $color-title-light;
+
+  @media (max-width: $dimension-tablet) {
+    font-size: 12.5vw;
+  }
+  @media (max-width: 435px) {
+    font-size: 15vw;
+  }
+}
+
+.footer__thanks__hand{
+  & img{
+    width: 160px;
+  }
+
+  @media (max-width: $dimension-tablet) {
+    & img{
+      width: auto;
+    }
+  }
+}
+
+.footer__main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: $gap-mobile;
+}
+
+.footer__song{
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  text-align: center;
+  color: $color-title-light;
+
+  & svg {
+    fill: $color-title-light;
+  }
+}
+
+.footer__credit{
+  color: $color-title-light;
+  text-align: center;
+}
+
+.footer__credit_link{
+  color: $color-title-light;
+  transition: $transition;
+  font-weight: bold;
+
+  &:hover {
+    border-bottom: 1px dotted $color-title-light;
+  }
+}

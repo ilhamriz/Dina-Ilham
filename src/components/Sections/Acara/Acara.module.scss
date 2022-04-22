@@ -1,0 +1,130 @@
+@import "variables.scss";
+
+.acara__wrapper {
+  position: relative;
+}
+
+.acara__container {
+  display: flex;
+  padding: 100px 0;
+
+  @media (max-width: $dimension-tablet) {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+}
+
+.acara__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.acara__content__date {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media (max-width: $dimension-tablet) {
+    gap: 32px;
+  }
+}
+
+.acara__content__date__title {
+  @media (max-width: $dimension-tablet) {
+    font-size: $font-size-xl;
+    line-height: 45px;
+  }
+}
+
+.acara__content__date__times {
+  display: flex;
+  gap: 80px;
+
+  @media (max-width: $dimension-tablet) {
+    gap: 48px;
+  }
+}
+
+.acara__content__date__icon {
+  display: flex;
+}
+
+.acara__content__date__name {
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 8px;
+
+  @media (max-width: $dimension-tablet) {
+    font-size: 20px;
+  }
+}
+
+.acara__content__date__time,
+.acara__content__map__address {
+  font-weight: 400;
+  color: $color-body;
+  line-height: normal;
+  letter-spacing: normal;
+
+  @media (max-width: $dimension-tablet) {
+    font-size: $font-size-md;
+  }
+}
+
+.acara__content__date__button {
+  width: fit-content;
+}
+
+.acara__content__map__title {
+  line-height: normal;
+  margin-bottom: 8px;
+
+  @media (max-width: $dimension-tablet) {
+    font-size: $font-size-xl;
+    line-height: 45px;
+  }
+
+  @media (max-width: $dimension-mobile-l) {
+    font-size: 7vw;
+    line-height: normal;
+  }
+}
+
+.acara__content__map__iframe {
+  display: flex;
+
+  & iframe {
+    width: 100%;
+    max-width: 710px;
+    height: 350px;
+  }
+}
+
+.acara__bunga {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  & picture{
+    display: flex;
+  }
+
+  & img {
+    max-width: 150px;
+  }
+
+  @media (max-width: $dimension-tablet) {
+    top: 10vw;
+    right: 0;
+    transform: translateY(0%);
+    transform: scaleX(-1);
+  }
+
+  @media (max-width: 480px) {
+    & img {
+      max-width: 100px;
+    }
+  }
+}

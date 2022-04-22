@@ -1,0 +1,80 @@
+@import "variables.scss";
+
+.countdown {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 40px;
+  // padding: 18px 0;
+  // padding: 18px 40px;
+  border-radius: $border-radius-md;
+  // border: 1px solid $color-line;
+}
+
+.countdown__container{
+  width: 56px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.countdown__time{
+  font-family: $font-family-body;
+  font-weight: bold;
+}
+
+.countdown__divider{
+  width: 2px;
+  height: 40px;
+  background: $color-line;
+}
+
+@media (max-width: $dimension-tablet) {
+  .countdown{
+    gap: 24px;
+  }
+
+  .countdown__divider{
+    height: 30px;
+  }
+}
+
+@media (max-width: 550px) {
+  .countdown{
+    gap: 16px;
+  }
+
+  .countdown__container{
+    gap: 0px;
+  }
+
+  .countdown__time{
+    font-size: 32px;
+  }
+}
+
+@media (max-width: $dimension-tablet) {
+  .countdown {
+    gap: 8px
+  }
+  .countdown__divider{
+    width: 1px;
+    height: 24px;
+  }
+}
+
+@media (max-width: $dimension-mobile-m) {
+  .countdown {
+    gap: 4px
+  }
+  .countdown__time{
+    font-size: 24px;
+  }
+  .countdown__name{
+    font-size: 14px;
+  }
+  .countdown__divider{
+    height: 16px;
+  }
+}
