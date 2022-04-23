@@ -42,7 +42,6 @@ function Component({ openRSVPstate, isTablet, params, device }) {
                     </span>
                     <span
                       className={`${styles.pembuka__title__date} text-body-2-bold`}
-                      // className=""
                       data-aos="fade-up"
                       data-aos-delay="900"
                     >
