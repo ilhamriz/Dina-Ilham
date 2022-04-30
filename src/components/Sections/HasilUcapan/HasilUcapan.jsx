@@ -18,7 +18,8 @@ function Component({ refresh }) {
   useEffect(() => {
     const fetchData = () => {
       setLoading(true);
-      axios.get(`${URL_API}?page=${page}&per_page=6`)
+      axios
+        .get(`${URL_API}?page=${page}&per_page=6`)
         .then((response) => {
           const { data, ...pagination } = response.data;
           setDatas(data);
@@ -37,19 +38,17 @@ function Component({ refresh }) {
     <Container fixed style={{ width: "100%", maxWidth: "1076px" }}>
       <Box className={css._wrapper}>
         <Box className={css._container}>
-          {!loading ? (
-            datas?.map((data) => (
-              <CardUcapan name={data.name} key={data.id}>
-                {data.description}
-              </CardUcapan>
-            ))
-          ) : (
-            [1, 2, 3, 4, 5, 6].map((item) => (
-              <Box className={css._loading} key={item}>
-                <SquareLoader color={'#14142b'} loading={loading} size={50} />
-              </Box>
-            ))
-          )}
+          {!loading
+            ? datas?.map((data) => (
+                <CardUcapan name={data.name} key={data.id}>
+                  {data.description}
+                </CardUcapan>
+              ))
+            : [1, 2, 3, 4, 5, 6].map((item) => (
+                <Box className={css._loading} key={item}>
+                  <SquareLoader color={"#14142b"} loading={loading} size={50} />
+                </Box>
+              ))}
         </Box>
         {datas.length ? (
           <Box className={css._page}>

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Pembuka.module.scss";
 import { Box, Container } from "@mui/material";
-import { flower_left, flower_left_webp, flower_right, flower_right_webp, hello_hand, hello_hand_webp } from "../../../assets";
+import { flower_left, flower_left_webp, flower_right, flower_right_webp } from "../../../assets";
 import { useTransition, animated } from "react-spring";
 
 function Component({ openRSVPstate, isTablet, params, device }) {
@@ -71,9 +71,7 @@ function Component({ openRSVPstate, isTablet, params, device }) {
                     <Box
                       className="text-body"
                       data-aos="fade-up"
-                      data-aos-offset={
-                        device.isSmallHeight ? device.deviceHeight - 413 : 0
-                      }
+                      data-aos-offset="0"
                       data-aos-delay="1000"
                     >
                       Kami mengundang Anda untuk merayakan pernikahan kami.

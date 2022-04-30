@@ -7,11 +7,12 @@ export function CheckRSVP(target) {
     "Science_of_Two",
     "Teknologi_Informasi_15",
     "M._Aditya_Ramadhan",
-    "Resi_Muhammad_Z.P.",
+    "Resi_Muhammad_Z.P",
     "Muhammad_Andry",
     "Muhammad_Habibi",
     "Diantita_Salinas",
-    // kak tazu, kak shella,
+    "Tazkia_Solihaty_Tsabitah",
+    "Shella_Ramashanti",
 
     "Bridgen",
     "Marshal",
@@ -22,7 +23,7 @@ export function CheckRSVP(target) {
     "Cost_Control_Team",
     "Fosma_165_Riau",
     "Student_Vaganza",
-    "Aminah_Citra_S.",
+    "Aminah_Citra_S",
     "Nurul_Humairah",
   ];
 
