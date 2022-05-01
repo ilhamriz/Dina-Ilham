@@ -5,6 +5,7 @@ import { LoadingSkeleton } from "../../Layout";
 import { hello_hand, hello_hand_webp } from "../../../assets";
 
 function Component() {
+  const URL_WEB = process.env.REACT_APP_URL_WEB;
   return (
     <footer className={css.footer__wrapper}>
       <Container fixed style={{ width: "100%", maxWidth: "1076px" }}>
@@ -58,7 +59,7 @@ function Component() {
             >
               Created by{" "}
               <a
-                href="http://www.bersamaamerta.id"
+                href={URL_WEB}
                 className={css.footer__credit_link}
               >
                 bersamaamerta.id

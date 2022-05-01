@@ -18,8 +18,6 @@ $gap-laptop: 32px;
 // Font Families
 $font-family-header: "Claudia Laura";
 $font-family-body: "Inter", sans-serif;
-// $font-family-header: "Inter", sans-serif;
-// $font-family-body: "Public Sans", sans-serif;
 
 // Font Size
 $font-size-xs: 14px;
@@ -63,8 +61,6 @@ $transition: .3s ease;
 @mixin text-header {
   font-family: $font-family-header;
   font-weight: 500;
-  // letter-spacing: -0.04em;
-  // letter-spacing: -0.04em;
   color: $color-title;
 }
 

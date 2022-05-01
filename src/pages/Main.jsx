@@ -1,19 +1,23 @@
-import css from "./Main.module.scss";
 import { Snackbar } from "@mui/material";
 import { useLocation, useHistory } from "react-router-dom";
 import { CheckRSVP } from "../utils/Utils";
 import { useEffect, useState } from "react";
 import { Pembuka, Navbar, Music } from "../components/Layout";
 import { Acara, Amplop, Galeri, Hero, Konfirmasi, Mempelai, Ucapan } from "../components/Sections";
+import { Prokes } from "../components/Dialog";
 
 function Component() {
+  const location = useLocation();
+  const history = useHistory();
   const [isRSVP, setIsRSVP] = useState(false);
   const [params, setParams] = useState(null);
   const [openNotif, setOpenNotif] = useState(false);
   const [openRSVP, setOpenRSVP] = useState(true);
   const [showMain, setShowMain] = useState(false);
-  const location = useLocation();
-  const history = useHistory();
+  const [isTablet, setIsTablet] = useState(false);
+  const [deviceHeight, setDeviceHeight] = useState(0);
+  const [isSmallHeight, setIsSmallHeight] = useState(false);
+  const [isProkes, setIsProkes] = useState(false);
 
   useEffect(() => {
     let query = new URLSearchParams(location.search);
@@ -36,10 +40,6 @@ function Component() {
     document.body.style.overflow = openRSVP ? "hidden" : "auto";
   }, [openRSVP]);
 
-  const [isTablet, setIsTablet] = useState(false);
-  const [deviceHeight, setDeviceHeight] = useState(0);
-  const [isSmallHeight, setIsSmallHeight] = useState(false);
-
   const handleResize = () => {
     const { innerWidth, innerHeight } = window;
     setIsTablet(innerWidth < 769 ? true : false);
@@ -61,6 +61,15 @@ function Component() {
       setShowMain(true);
     }, 500);
   };
+
+  useEffect(() => {
+    if (showMain){
+      setTimeout(() => {
+        setIsProkes(true);
+      }, 10000);
+    }
+  }, [showMain])
+  
 
   if (!showMain) {
     return (
@@ -100,6 +109,7 @@ function Component() {
       <Ucapan isTablet={isTablet} />
     </main>
 
+    <Prokes open={isProkes} setOpen={setIsProkes} />
     <Music />
     </>
   );

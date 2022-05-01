@@ -7,6 +7,12 @@
 .prokes__title{
   text-align: center;
   margin-bottom: $gap-mobile;
+  font-family: $font-family-body;
+  font-weight: 600;
+}
+
+.prokes__body{
+  font-weight: normal;
 }
 
 .prokes__content{
@@ -16,14 +22,14 @@
 
 .prokes__list{
   width: 100%;
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: $gap-tablet;
 
   @media (max-width: $dimension-tablet){
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -34,8 +40,19 @@
   justify-content: flex-start;
   align-items: center;
 
+  & span{
+    font-size: 16px;
+    line-height: 20px;
+  }
+
   & img{
     width: 100%;
-    max-width: fit-content;
+    max-width: 80px;
+  }
+
+  @media (max-width: $dimension-mobile-l){
+    & span{
+      font-size: 14px;
+    }
   }
 }

@@ -1,6 +1,4 @@
 import {
-  Button,
-  Container,
   Dialog,
   DialogActions,
   DialogContent,
@@ -22,7 +20,7 @@ function Component({ open, setOpen }) {
   return (
     <Dialog
       fullWidth={true}
-      maxWidth="lg"
+      maxWidth="md"
       open={open}
       className={styles.prokes}
     >
@@ -30,7 +28,7 @@ function Component({ open, setOpen }) {
         <Box className={`${styles.prokes__title} header-3`}>
           Protokol Kesehatan
         </Box>
-        <Box className="text-body">
+        <Box className={`${styles.prokes__body} text-body-3`}>
           Demi kebaikan bersama, kami menghimbau kepada para tamu undangan agar
           selalu menerapkan protokol kesehatan.
         </Box>
@@ -39,27 +37,27 @@ function Component({ open, setOpen }) {
         <Box className={styles.prokes__content}>
           <Box className={styles.prokes__list}>
             <Box className={styles.prokes__item}>
-              <img src={masker} alt="" />
+              <img src={masker} alt="Mask" />
               <span className="text-body-2-bold">Memakai Masker</span>
             </Box>
             <Box className={styles.prokes__item}>
-              <img src={cuci_tangan} alt="" />
+              <img src={cuci_tangan} alt="Wash Hand" />
               <span className="text-body-2-bold">Mencuci Tangan</span>
             </Box>
             <Box className={styles.prokes__item}>
-              <img src={kerumunan} alt="" />
+              <img src={kerumunan} alt="Avoid Crowd" />
               <span className="text-body-2-bold">Jauhi Kerumunan</span>
             </Box>
             <Box className={styles.prokes__item}>
-              <img src={jarak} alt="" />
+              <img src={jarak} alt="Distance" />
               <span className="text-body-2-bold">Menjaga Jarak 2m</span>
             </Box>
             <Box className={styles.prokes__item}>
-              <img src={kesehatan} alt="" />
+              <img src={kesehatan} alt="Healthy" />
               <span className="text-body-2-bold">Kondisi Sehat</span>
             </Box>
             <Box className={styles.prokes__item}>
-              <img src={handsanitizer} alt="" />
+              <img src={handsanitizer} alt="Use Handsanitizer" />
               <span className="text-body-2-bold">Memakai Handsanitizer</span>
             </Box>
           </Box>

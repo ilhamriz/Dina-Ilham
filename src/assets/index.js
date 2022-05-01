@@ -1,14 +1,12 @@
-import masker from "./masker.png";
-import cuci_tangan from "./cuci_tangan.png";
-import kerumunan from "./kerumunan.png";
-import jarak from "./jarak.png";
-import kesehatan from "./kesehatan.png";
-import handsanitizer from "./handsanitizer.png";
+import masker from "./prokes/masker.png";
+import cuci_tangan from "./prokes/cuci_tangan.png";
+import kerumunan from "./prokes/kerumunan.png";
+import jarak from "./prokes/jarak.png";
+import kesehatan from "./prokes/kesehatan.png";
+import handsanitizer from "./prokes/handsanitizer.png";
 import bca from "./bca.png";
 import bri from "./bri.png";
 import QR_BCA from "./QR_BCA.jpg";
-// import QR_BRI from "./QR_BRI.jpg";
-import qr_code from "./qr_code.png";
 import logo from "./main/logo.png";
 import hello_hand from "./main/hello_hand.png";
 import pembuka from "./main/pembuka.jpg";
@@ -69,7 +67,6 @@ export {
   bca,
   bri,
   QR_BCA,
-  qr_code,
   logo,
   pembuka,
   hello_hand,
