@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/dina-ilham/static/css/main.6f565177.chunk.css",
-    "main.js": "/dina-ilham/static/js/main.bfe1af76.chunk.js",
-    "main.js.map": "/dina-ilham/static/js/main.bfe1af76.chunk.js.map",
+    "main.js": "/dina-ilham/static/js/main.d7c15b7f.chunk.js",
+    "main.js.map": "/dina-ilham/static/js/main.d7c15b7f.chunk.js.map",
     "runtime-main.js": "/dina-ilham/static/js/runtime-main.81c4db19.js",
     "runtime-main.js.map": "/dina-ilham/static/js/runtime-main.81c4db19.js.map",
     "static/css/2.7fc9bc2b.chunk.css": "/dina-ilham/static/css/2.7fc9bc2b.chunk.css",
@@ -81,6 +81,6 @@
     "static/css/2.7fc9bc2b.chunk.css",
     "static/js/2.e00e1cd6.chunk.js",
     "static/css/main.6f565177.chunk.css",
-    "static/js/main.bfe1af76.chunk.js"
+    "static/js/main.d7c15b7f.chunk.js"
   ]
 }
