@@ -42,7 +42,7 @@ function App() {
       <Router>
         <ScrollToTop />
         <Switch>
-          <Route exact path="/dina-ilham">
+          <Route exact path="/">
             <Suspense fallback={<Loading />}>
               <Main />
             </Suspense>
