@@ -84,7 +84,7 @@ function Component({ isTablet }) {
                   <Box mb={1}>Nama</Box>
                   <FieldCustomInput
                     name="nama"
-                    placeholder="Robert Fox"
+                    placeholder="Kemal Zulkarnain"
                     darkmode="true"
                   />
                 </Box>

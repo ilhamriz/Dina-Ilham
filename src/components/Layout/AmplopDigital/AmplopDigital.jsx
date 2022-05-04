@@ -150,7 +150,7 @@ function Component() {
 
         <Box className={css.konfirmasi__form}>
           <Box className="text-label">Nama</Box>
-          <FieldCustomInput name="name" placeholder="Robert Fox" />
+          <FieldCustomInput name="name" placeholder="Kemal Zulkarnain" />
         </Box>
 
         <Field name="amount">

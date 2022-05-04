@@ -16,6 +16,7 @@
 
 .mempelai__container{
   display: flex;
+  align-items: center;
 
   & > div{
     flex: 50%;
@@ -52,10 +53,7 @@
 }
 
 .mempelai__wanita__content{
-  padding: 12% 12% 0 0;
-  @media (max-width: $dimension-laptop){
-    padding-top: 10%;
-  }
+  padding-right: 12%;
   @media (max-width: $dimension-tablet){
     padding: 0 80px 0 0;
     order: 2;
@@ -100,6 +98,8 @@
   display: flex;
   flex-direction: column;
   gap: $gap-mobile;
+
+  margin-bottom: 32px;
 
   & p {
     color: $color-body-light;
@@ -146,11 +146,7 @@
 }
 
 .mempelai__pria__content{
-  padding: 8% 0 0 10%;
-
-  @media (max-width: $dimension-laptop){
-    padding-top: 6%;
-  }
+  padding-left: 10%;
   @media (max-width: $dimension-tablet){
     padding: 0 80px 0 0;
   }
@@ -182,5 +178,45 @@
     & img {
       max-width: 50px;
     }
+  }
+}
+
+._sosmed_pria__wrapper{
+  display: flex;
+  gap: $gap-mobile;
+}
+
+._sosmed__link{
+  width: fit-content;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border-bottom: 3px dotted $color-accent;
+
+  color: $color-body-light;
+  transition: $transition;
+
+  &:hover{
+    color: $color-title-light;
+  }
+}
+
+._sosmed__warning{
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding-left: 88px;
+  font-size: $font-size-xs;
+  font-style: italic;
+  
+  & svg {
+    width: 40px;
+    height: 21.18px;
+    margin-top: 7px;
+    fill: $color-body-light;
+  }
+
+  @media (min-width: $dimension-tablet) and (max-width: 850px) {
+    padding-left: 9vw;
   }
 }
