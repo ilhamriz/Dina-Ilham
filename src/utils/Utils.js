@@ -27,6 +27,9 @@ export function CheckRSVP(target) {
     "Student_Vaganza",
     "Aminah_Citra_S",
     "Nurul_Humairah",
+    "Keluarga_Besar_SMPs_YKPP",
+    "Finance_Team",
+    "Noerdin_Family"
   ];
 
   return listRSVP.includes(target);
