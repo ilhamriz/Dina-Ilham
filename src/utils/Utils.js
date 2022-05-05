@@ -13,6 +13,8 @@ export function CheckRSVP(target) {
     "Diantita_Salinas",
     "Tazkia_Solihaty_Tsabitah",
     "Shella_Ramashanti",
+    "Keluarga_Besar_Fatimah_Hasan",
+    "SMPN_1_Tanjung_Pura_82-83",
 
     "Bridgen",
     "Marshal",
