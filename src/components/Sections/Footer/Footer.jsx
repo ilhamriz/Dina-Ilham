@@ -62,7 +62,7 @@ function Component() {
                 href={URL_WEB}
                 className={css.footer__credit_link}
               >
-                bersamaamerta.id
+                bersamaamerta
               </a>
             </Box>
           </Box>
